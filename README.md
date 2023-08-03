@@ -18,3 +18,16 @@ Página del dashboard:
 ![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/eb3dc7c5-9290-4d2b-9dae-287135fb8185)
 
 Se estará actualizando para dar una mejor experiencia y personalizando elementos
+
+-Primera actualización 
+
+Se agregó el botón de GoogleAuthProvider junto con su icono
+
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/cebc090a-4ffa-4099-829f-fe44924ce66d)
+
+
+Y se agregó tambien el Footer (un tanto pocho)
+
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/bf94e26c-1fe7-4c9d-9eba-29178d0b8b34)
+
+Tambien se usó un poco el @media para dispositivos moviles y tables 
