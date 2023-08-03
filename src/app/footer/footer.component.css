@@ -1,0 +1,29 @@
+.footer {
+  background-color: #05db94e5;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Roboto Slab', serif;
+
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+}
+
+

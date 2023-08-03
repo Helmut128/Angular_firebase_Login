@@ -8,6 +8,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,6 +19,10 @@ import { VerificarCorreoComponent } from './components/verificar-correo/verifica
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { enviroment } from 'src/environments/environments';
+import { FooterComponent } from './footer/footer.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -27,14 +33,21 @@ import { enviroment } from 'src/environments/environments';
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
     SpinnerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(enviroment.firebaseConfig),
+    AngularFireModule.initializeApp(
+      enviroment.firebaseConfig,
+      'angular-auth-firebase'
+    ),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    AngularFireAuthModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],

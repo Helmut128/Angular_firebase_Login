@@ -3,6 +3,9 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+//importando el servicio de auth service
+import { AuthService } from 'src/app/services/auth.service';
+
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
 
@@ -15,7 +18,10 @@ export class LoginComponent {
   loginUsuario: FormGroup;
   loading: boolean = false;
 
+  OnGoogleLogin() {}
+
   constructor(
+    public authService: AuthService,
     private fb: FormBuilder,
     private afAuth: AngularFireAuth,
     private toastr: ToastrService,
@@ -28,11 +34,11 @@ export class LoginComponent {
     });
   }
 
-  ngOnInit() {}
-
   login() {
     const email = this.loginUsuario.value.email;
     const password = this.loginUsuario.value.password;
+
+    this.authService.loginWithGoogle();
 
     this.loading = true;
     this.afAuth

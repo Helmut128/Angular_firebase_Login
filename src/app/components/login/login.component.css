@@ -16,3 +16,12 @@
   padding: 15px;
   text-align: center;
 }
+
+.google-icon{
+  width: 40px;
+
+}
+.google-button{
+  background-color: whitesmoke;
+  margin-top: 10px;
+}
