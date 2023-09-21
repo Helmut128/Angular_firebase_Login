@@ -6,8 +6,10 @@ import { Router } from '@angular/router';
 //importando el servicio de auth service
 import { AuthService } from 'src/app/services/auth.service';
 
+//injección de servicios
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,12 @@ export class LoginComponent {
   loginUsuario: FormGroup;
   loading: boolean = false;
 
-  OnGoogleLogin() {}
+  //Abrir googleLogin
+  OnGoogleLogin() {
+    console.log(this.loginUsuario);
+    this.authService.loginWithGoogle();
+    this.router.navigate(['/dashboard']);
+  }
 
   constructor(
     public authService: AuthService,
@@ -37,8 +44,6 @@ export class LoginComponent {
   login() {
     const email = this.loginUsuario.value.email;
     const password = this.loginUsuario.value.password;
-
-    this.authService.loginWithGoogle();
 
     this.loading = true;
     this.afAuth

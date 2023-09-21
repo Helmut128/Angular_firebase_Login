@@ -61,22 +61,22 @@
         No tienes cuenta? <a routerLink="/registar-usuario">Registrar</a>
       </p>
       <a class="mt-3" routerLink="/recuperar-password">Recuperar contraseña</a>
-
-      <div class="google">
-        <button (click)="OnGoogleLogin()" class="google-button">
-          <p class="mt-3">
-            Registrarte con Google <a routerLink="/registar-usuario "></a>
-            <a href="">
-              <img
-                class="google-icon"
-                src="../../../assets/img/google-icon.png"
-                alt="Icono de google"
-              />
-            </a>
-          </p>
-        </button>
-      </div>
     </form>
+
+    <div class="google">
+      <button (click)="OnGoogleLogin()" class="google-button">
+        <p class="mt-3">
+          Registrarte con Google
+          <a href="">
+            <img
+              class="google-icon"
+              src="../../../assets/img/google-icon.png"
+              alt="Icono de google"
+            />
+          </a>
+        </p>
+      </button>
+    </div>
   </div>
 
   <app-spinner *ngIf="loading"></app-spinner>

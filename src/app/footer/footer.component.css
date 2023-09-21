@@ -1,12 +1,17 @@
 .footer {
-  background-color: #05db94e5;
-  color: black;
-  padding: 20px 0;
+  background-image: linear-gradient(180deg, #8ff3ff 0, #63dbff 25%, #0cc1ed 50%, #00a7db 75%, #0091cc 100%);
+  color: black; /* Cambiado a texto blanco para mejorar la legibilidad */
+  padding: 30px 0; /* Aumentado el padding superior e inferior para más espacio */
   text-align: center;
-  width: 100%;
-  margin-top: 20px;
-  font-family: 'Roboto Slab', serif;
+  height: 100%; /* Establece la altura al 100% */
+}
 
+.footer h4 {
+  color: #0a0a0a; /* Color del encabezado */
+}
+
+.footer p {
+  margin: 0; /* Elimina el margen predeterminado */
 }
 
 .social-icons {
@@ -20,10 +25,18 @@
 }
 
 .social-icons a {
-  color: black;
-  font-size: 20px;
+  color: #000000; /* Color del ícono de redes sociales */
+  font-size: 24px; /* Aumentado el tamaño del ícono */
   text-decoration: none;
   font-family: 'Roboto Slab', serif;
 }
 
+/* Cambios adicionales para dar estilo a los enlaces de correo electrónico */
+.footer a {
+  background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+  text-decoration: none;
+}
 
+.footer a:hover {
+  text-decoration: none;
+}
