@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 //importando el servicio de auth service
 import { AuthService } from 'src/app/services/auth.service';
 
+//injección de servicios
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
 
@@ -18,7 +19,39 @@ export class LoginComponent {
   loginUsuario: FormGroup;
   loading: boolean = false;
 
-  OnGoogleLogin() {}
+  //Abrir googleLogin
+  OnGoogleLogin() {
+    // Proporcionar feedback al usuario, como un spinner de carga.
+    this.authService
+      .loginWithGoogle()
+      .then(() => {
+        // Autenticación exitosa, realizar acciones adicionales si es necesario.
+        console.log('Autenticación exitosa');
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((error) => {
+        // Manejar errores y proporcionar feedback al usuario.
+        console.error('Error al iniciar sesión con Google:', error);
+        // Puedes mostrar un mensaje de error al usuario aquí si es necesario.
+      });
+  }
+
+  //Abrir FacebookLogin
+
+  onFacebookLogin() {
+    this.authService
+      .loginWithFacebook()
+      .then(() => {
+        //Autentificación exitosa, realizar acciones adicionales si es necesario.
+        console.log('Autenticación exitosa');
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((error) => {
+        // Manejar errores y proporcionar feedback al usuario.
+        console.error('Error al iniciar sesión con Google:', error);
+        // Puedes mostrar un mensaje de error al usuario aquí si es necesario.
+      });
+  }
 
   constructor(
     public authService: AuthService,
@@ -37,8 +70,6 @@ export class LoginComponent {
   login() {
     const email = this.loginUsuario.value.email;
     const password = this.loginUsuario.value.password;
-
-    this.authService.loginWithGoogle();
 
     this.loading = true;
     this.afAuth
