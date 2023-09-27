@@ -1,42 +1,87 @@
+/* Estilos generales del footer */
 .footer {
-  background-image: linear-gradient(180deg, #8ff3ff 0, #63dbff 25%, #0cc1ed 50%, #00a7db 75%, #0091cc 100%);
-  color: black; /* Cambiado a texto blanco para mejorar la legibilidad */
-  padding: 30px 0; /* Aumentado el padding superior e inferior para más espacio */
+  background-color: #333333c0;
+  color: #fff;
+  padding: 30px 0;
   text-align: center;
-  height: 100%; /* Establece la altura al 100% */
+  font-family: "Arial", sans-serif; /* Cambia "Arial" por tu fuente personalizada */
 }
 
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilos para el texto del footer */
 .footer h4 {
-  color: #0a0a0a; /* Color del encabezado */
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .footer p {
-  margin: 0; /* Elimina el margen predeterminado */
+  font-size: 16px;
 }
 
+/* Estilos para los íconos de redes sociales */
 .social-icons {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .social-icons li {
-  display: inline-block;
-  margin-right: 10px;
+  display: inline;
+  margin-right: 20px;
 }
 
 .social-icons a {
-  color: #000000; /* Color del ícono de redes sociales */
-  font-size: 24px; /* Aumentado el tamaño del ícono */
   text-decoration: none;
-  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  font-size: 24px;
 }
 
-/* Cambios adicionales para dar estilo a los enlaces de correo electrónico */
-.footer a {
-  background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
-  text-decoration: none;
+/* Estilos para la línea divisoria */
+.divider {
+  border-top: 1px solid #fff;
+  margin: 20px 0;
 }
 
-.footer a:hover {
-  text-decoration: none;
+/* Estilos para el texto de derechos de autor y el badge de Creative Commons */
+.text-center {
+  font-size: 14px;
+}
+
+.cc-badge {
+  margin-top: 10px;
+}
+
+/* Estilos para el año actual */
+#current-year {
+  font-weight: bold;
+}
+
+/* Estilos para el ícono de Creative Commons */
+.icon-tabler-badge-cc {
+  vertical-align: middle;
+}
+
+.video1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/*Estilos de boton de facebook */
+.facebook-icon {
+  width: 30px;
+}
+
+.twitter-icon {
+  width: 30px;
+}
+
+.youtube-icon{
+  width: 30px;
+}
+
+.numero {
+  width: 30px;
 }

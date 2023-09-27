@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
-import { GoogleAuthProvider } from 'firebase/auth';
-import { FacebookAuthProvider } from 'firebase/auth';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  GithubAuthProvider,
+} from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +16,16 @@ export class AuthService {
   //Login con Google
   loginWithGoogle() {
     const provider = new GoogleAuthProvider(); // Updated usage
+    return this.auth.signInWithPopup(provider);
+  }
+
+  loginWithFacebook() {
+    const provider = new FacebookAuthProvider();
+    return this.auth.signInWithPopup(provider);
+  }
+
+  loginWithGitHub() {
+    const provider = new GithubAuthProvider();
     return this.auth.signInWithPopup(provider);
   }
 

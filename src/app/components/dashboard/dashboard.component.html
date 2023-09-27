@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mx-auto">
   <header
     class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
   >
@@ -18,7 +18,9 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+      <li>
+        <a routerLink="/dashboard" class="nav-link px-2 link-secondary">Home</a>
+      </li>
       <li>
         <a
           href="https://allmylinks.com/helmutmartinez128"
@@ -36,7 +38,7 @@
         class="btn btn-outline-primary me-2"
         (click)="logOut()"
       >
-        LogOut
+        Cerra Sesión
       </button>
     </div>
   </header>
@@ -47,9 +49,14 @@
 
   <div class="parent">
     <div class="videos">
+      <p class="video1">
+        Bienvenidos a un primer video trata sobre un logro bien perrón del cual
+        me alegra mucho haberlo completado con mi amigo desgraciado que nos
+        introdujo a este tan adictivo y desgraciado juego XD
+      </p>
       <iframe
-        width="560"
-        height="315"
+        width="500"
+        height="300"
         src="https://www.youtube.com/embed/nwrVkQqTC_A"
         title="YouTube video player"
         frameborder="0"
@@ -59,9 +66,15 @@
     </div>
 
     <div class="videos">
+      <p class="video1">
+        Este segundo video contiene una de las partidas de la promocion a ORO
+        que teniamos que realizar, en la cual pues nuestros aliados se
+        convertirian en nuestros propios enemigos XD
+      </p>
+
       <iframe
-        width="560"
-        height="315"
+        width="500"
+        height="300"
         src="https://www.youtube.com/embed/K8l5AwzS2ZE"
         title="YouTube video player"
         frameborder="0"
@@ -71,9 +84,18 @@
     </div>
 
     <div class="videos">
+      <p class="video1">
+        Este video es uno de los que más me ha costado hacer, y sobre todo
+        investigar, la recopilación de los TOP CANALES CON MAS SUSCRIPTORES DE
+        NICARAGUA, algunos me comentaban que no eran esos los mejores canales,
+        por eso yo recalco que es de TOP CANALES y no de TOP MEJORES CANALES.
+        Así que un buen apoyo al video porque ya cuenta con mas de 2k de
+        reproducciones
+      </p>
+
       <iframe
-        width="560"
-        height="315"
+        width="500"
+        height="300"
         src="https://www.youtube.com/embed/uEQVWtKNN14"
         title="YouTube video player"
         frameborder="0"
@@ -83,9 +105,17 @@
     </div>
 
     <div class="videos">
+      <p class="video1">
+        Este cuarto video contiene una de las partidas de Wild Rift que lo hemos
+        jugado en directo, junto con algunas promociones a divisiones más
+        importantes, y seguiré subiendo videos de directos en los cuales he
+        logrado subir divisiones
+        <br />
+      </p>
+
       <iframe
-        width="560"
-        height="315"
+        width="500"
+        height="300"
         src="https://www.youtube.com/embed/REf2MOdx85g"
         title="YouTube video player"
         frameborder="0"
@@ -94,5 +124,6 @@
       ></iframe>
     </div>
   </div>
-  <app-footer></app-footer>
+
+  <app-footer class="w-100"></app-footer>
 </div>

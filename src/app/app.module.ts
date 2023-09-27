@@ -20,9 +20,9 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { enviroment } from 'src/environments/environments';
 import { FooterComponent } from './footer/footer.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -46,8 +46,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -58,25 +58,43 @@
         </button>
       </div>
       <p class="mt-3">
-        No tienes cuenta? <a routerLink="/registar-usuario">Registrar</a>
+        No tienes cuenta?
+        <a routerLink="/registar-usuario">Registrarse con correo</a>
       </p>
-      <a class="mt-3" routerLink="/recuperar-password">Recuperar contraseña</a>
     </form>
 
-    <div class="google">
-      <button (click)="OnGoogleLogin()" class="google-button">
-        <p class="mt-3">
-          Registrarte con Google
-          <a href="">
-            <img
-              class="google-icon"
-              src="../../../assets/img/google-icon.png"
-              alt="Icono de google"
-            />
-          </a>
-        </p>
-      </button>
+    <div class="Logins-buttons">
+      <div class="google">
+        <button (click)="OnGoogleLogin()" class="google-button">
+          <img
+            class="google-icon"
+            src="../../../assets/img/google-icon.png"
+            alt="Icono de google"
+          />
+        </button>
+      </div>
+      <div class="facebook">
+        <button (click)="onFacebookLogin()" class="google-button">
+          <img
+            class="facebook-icon"
+            src="../../../assets/img/facebook.png"
+            alt="Icono de facebook"
+          />
+        </button>
+      </div>
+
+      <div class="github">
+        <button (click)="onGitHubLogin()" class="google-button">
+          <img
+            class="github-icon"
+            src="../../../assets/img/github.png"
+            alt="Icono de facebook"
+          />
+        </button>
+      </div>
     </div>
+
+    <a class="mt-4" routerLink="/recuperar-password">Recuperar contraseña</a>
   </div>
 
   <app-spinner *ngIf="loading"></app-spinner>

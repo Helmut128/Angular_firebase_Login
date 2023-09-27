@@ -9,7 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 //injección de servicios
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
-import { GoogleAuthProvider } from 'firebase/auth';
 
 @Component({
   selector: 'app-login',
@@ -22,9 +21,52 @@ export class LoginComponent {
 
   //Abrir googleLogin
   OnGoogleLogin() {
-    console.log(this.loginUsuario);
-    this.authService.loginWithGoogle();
-    this.router.navigate(['/dashboard']);
+    // Proporcionar feedback al usuario, como un spinner de carga.
+    this.authService
+      .loginWithGoogle()
+      .then(() => {
+        // Autenticación exitosa, realizar acciones adicionales si es necesario.
+        console.log('Autenticación exitosa');
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((error) => {
+        // Manejar errores y proporcionar feedback al usuario.
+        console.error('Error al iniciar sesión con Google:', error);
+        // Puedes mostrar un mensaje de error al usuario aquí si es necesario.
+      });
+  }
+
+  //Abrir FacebookLogin
+
+  onFacebookLogin() {
+    this.authService
+      .loginWithFacebook()
+      .then(() => {
+        //Autentificación exitosa, realizar acciones adicionales si es necesario.
+        console.log('Autenticación exitosa');
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((error) => {
+        // Manejar errores y proporcionar feedback al usuario.
+        console.error('Error al iniciar sesión con Facebook:', error);
+        // Puedes mostrar un mensaje de error al usuario aquí si es necesario.
+      });
+  }
+
+  //Abrir GitHubLogin
+  onGitHubLogin() {
+    this.authService
+      .loginWithGitHub()
+      .then(() => {
+        // Autenticación exitosa, realizar acciones adicionales si es necesario.
+        console.log('Autenticación exitosa con GitHub');
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((error) => {
+        // Manejar errores y proporcionar feedback al usuario.
+        console.error('Error al iniciar sesión con GitHub:', error);
+        // Puedes mostrar un mensaje de error al usuario aquí si es necesario.
+      });
   }
 
   constructor(

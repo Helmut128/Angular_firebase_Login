@@ -1,58 +1,78 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12">
         <h4>Contacto</h4>
         <p>
           Puedes contactarnos por correo electrónico:
-          <br />Correoprueba@gmail.com
+          <br />
+          <a href="correoSoporte@gmail.com">correoSoporte@gmail.com</a>
+          <br />
+          O llamarnos al siguiente número:
+          <img
+            class="numero"
+            src="../../assets/img/nicaragua.png"
+            alt="Numero de telefono"
+          />8888-8888
         </p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12">
         <h4>Síguenos en las redes sociales</h4>
         <ul class="social-icons">
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fa fa-facebook"></i> Facebook
+            <img
+              class="facebook-icon"
+              src="../../../assets/img/facebook.png"
+              alt="Icono de facebook"
+            />
+            <a
+              href="https://www.facebook.com/NicaHelmut/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook"></i> Facebook
             </a>
           </li>
+
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fa fa-twitter"></i> Twitter
+            <img
+              class="twitter-icon"
+              src="../../assets/img/twitter.png"
+              alt="Icono de Twitter"
+            />
+            <a
+              href="https://twitter.com/helmut83290982"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i> Twitter
             </a>
           </li>
+
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fa fa-linkedin"></i> LinkedIn
+            <img
+              class="twitter-icon"
+              src="../../assets/img/youtube.png"
+              alt="Icono de Twitter"
+            />
+            <a
+              href="https://www.youtube.com/helmutmartinez128"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i> YouTube
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <hr />
-    <!-- Línea horizontal para separar el contenido superior del copyright -->
+    <hr class="divider" />
     <div class="row">
       <div class="col-md-12">
-        <p class="text-center">© 2023 Todos los derechos reservados</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-badge-cc"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
-          />
-          <path d="M10 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
-          <path d="M17 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
-        </svg>
+        <p class="text-center">
+          &copy; <span id="current-year">{{ currentYear }}</span> Todos los
+          derechos reservados
+        </p>
       </div>
     </div>
   </div>
