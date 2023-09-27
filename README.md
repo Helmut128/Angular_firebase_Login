@@ -50,4 +50,11 @@ Cambio al Login y agregamos autenticación con GitHub, luego veremos si con twit
 
  Y agregamos algunos cambios al dashboard
 
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/4d79e28b-038e-46cd-94b8-779f77e9b7c5)
+
+ 
+Cambios al Footer tambien
+
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/fd99f423-6654-4d73-9f47-5164bd3f1f5f)
+
 
