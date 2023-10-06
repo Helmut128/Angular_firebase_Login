@@ -58,3 +58,17 @@ Cambios al Footer tambien
 ![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/fd99f423-6654-4d73-9f47-5164bd3f1f5f)
 
 
+Actualización 6 Octubre 2023 
+
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/5090b0db-9b6c-47c7-b273-29d5713e384e)
+
+
+Diseño adaptado para dispositivos móviles
+
+![image](https://github.com/Helmut128/Angular_firebase_Login/assets/65142656/fccc0816-175e-4009-98b3-23a81f9a7331)
+
+
+Entre otros cambios pequeños a la App. Seguiremos trabajando para el mejor funcionamiento e iremos añadiendo nuevas secciones
+
+
+
