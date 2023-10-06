@@ -5,6 +5,7 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { VerificarCorreoComponent } from './components/verificar-correo/verificar-correo.component';
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -19,5 +20,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [AuthGuard],
 })
 export class AppRoutingModule {}

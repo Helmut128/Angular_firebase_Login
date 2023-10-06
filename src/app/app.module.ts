@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//Cookies service
+
+import { CookieService } from 'ngx-cookie-service';
+
 //modulos
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -46,8 +50,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AngularFireAuthModule,
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideAuth(() => getAuth()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,10 +1,12 @@
 /* Estilos generales del footer */
 .footer {
+  position: relative;
   background-color: #333333c0;
   color: #fff;
   padding: 30px 0;
   text-align: center;
   font-family: "Arial", sans-serif; /* Cambia "Arial" por tu fuente personalizada */
+
 }
 
 .container {

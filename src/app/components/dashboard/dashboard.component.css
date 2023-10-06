@@ -23,6 +23,45 @@
           }
       }
 
+      @media screen and (max-width: 1000px){
+        .video1 {
+          text-align: center;
+        }
+      }
+
+
+
+      @media screen and (max-width: 1000px){
+        .parent {
+          grid-column-gap: 80px;
+          grid-row-gap: 0px;
+        }
+      }
+
+      @media screen and (max-width: 1000px){
+        .video1 {
+          font-size: 1rem;
+        }
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Mantén una relación de aspecto de 16:9 */
+        overflow: hidden;
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
 
 
 .video1{
